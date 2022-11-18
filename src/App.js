@@ -1,10 +1,13 @@
-import './App.css';
-import Card from './components/card/Card';
+import "./App.css";
+import { AppContextProvider } from "./context/AppContext";
+import AppRouter from "./routers/AppRouter";
 
 function App() {
   return (
     <div>
-      <Card/>
+      <AppContextProvider>
+        <AppRouter />
+      </AppContextProvider>
     </div>
   );
 }
