@@ -1,5 +1,7 @@
-import { useAppContext } from "../../context/AppContext";
+import { useAppContext } from "../../hooks/useAppContext";
+
 import styles from "./Home.module.css";
+
 const Home = () => {
   const { deneme } = useAppContext();
   return (

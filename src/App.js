@@ -4,10 +4,14 @@ import AppRouter from "./routers/AppRouter";
 
 function App() {
   return (
-    <div>
-      <AppContextProvider>
-        <AppRouter />
-      </AppContextProvider>
+    <div id="wrapperOut">
+      <div id="wrapperInner ">
+        <div id="wrapper">
+          <AppContextProvider>
+            <AppRouter />
+          </AppContextProvider>
+        </div>
+      </div>
     </div>
   );
 }
