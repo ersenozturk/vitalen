@@ -2,4 +2,7 @@
   height: 590px;
   /* background-color: #2b0534; */
   background-image: url("/public/assets/cinemaSeats.png");
+  display: flex;
+  justify-content: space-between;
+  /* align-items: flex-start; */
 }

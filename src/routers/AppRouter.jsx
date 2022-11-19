@@ -9,6 +9,7 @@ const AppRouter = () => {
         <BrowserRouter>
             <Routes>
                 <Route path='/' element={<Home />}/>
+                {/* <Route path='"/home/datails/:id' element={<Details />}/> */}
             </Routes>
             <Footer/>
         </BrowserRouter>
