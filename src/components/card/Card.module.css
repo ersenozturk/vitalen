@@ -1,3 +1,21 @@
-.container{
-    background-color: red;
-}
+.card {
+    position: relative;
+    cursor: pointer;
+  }
+  .cardFooter {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(36, 18, 58, 0.76);
+    backdrop-filter: blur(2px);
+    border-radius: 0px 0px 4px 4px;
+    width: 220px;
+  }
+  .cardTitle {
+      padding: 27px 22.5px 32px 22.5px;
+      text-align: center;
+  }
+  
