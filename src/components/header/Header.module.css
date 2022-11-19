@@ -1,0 +1,5 @@
+.container {
+  height: 590px;
+  /* background-color: #2b0534; */
+  background-image: url("/public/assets/cinemaSeats.png");
+}

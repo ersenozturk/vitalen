@@ -5,7 +5,7 @@ import AppRouter from "./routers/AppRouter";
 function App() {
   return (
     <div id="wrapperOut">
-      <div id="wrapperInner ">
+      <div id="wrapperInner">
         <div id="wrapper">
           <AppContextProvider>
             <AppRouter />

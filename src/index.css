@@ -1,55 +1,57 @@
-/* body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap");
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-} */
-
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
-
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
-
 
 :root {
   /* colors */
-  --blue: #243aff;
-  --color-light: #7b7b7b;
-  --color-dark: #242529;
+  --color-black: #000000;
   --color-white: #ffffff;
-  --bg-categories: #f4f4f4;
-  --green: #33a969;
-  --pin-red: #F55B5C;
+  --color-1: #2c173c;
+  --color-2: #1b002a;
+  --color-3: #220f32;
+  --color-4: #2b0534;
+  --color-5: #523f5f;
+  --color-6: #1a0029;
+  --color-7: #352441;
+  --color-8: #520041;
+  --color-9: #a59aac;
+  --color-10: #190027;
+  --color-11: #504458;
+  --color-12: #a20040;
+  --color-13: #24123a;
+  --color-14: #392e5b;
+  --color-15: #707cb4;
 
   /* rest of the vars */
-  --borderRadius-light: 0.15rem;
-  --borderRadius: 0.25rem;
-  --borderRadius-hard:1rem;
-  --transition: 0.3s ease-in-out all;
+  --borderRadius: 4px;
 
   /* box shadow*/
-  --shadow-1: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
-  --shadow-2: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
-    0 2px 4px -1px rgba(0, 0, 0, 0.06);
-  --shadow-3: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
-    0 4px 6px -2px rgba(0, 0, 0, 0.05);
-  --shadow-4: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
-    0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  --shadow-1: 0px 0px 25px rgba(0, 0, 0, 0.11);
+  --shadow-2: 0px 0px 25px rgba(73, 73, 73, 0.25);
+
+  /* heading 1 */
+  --head-1-fs: 32px;
+  --head-1-lh: 39.01px;
+  --head-1-2-fw: 700;
+
+  /* heading 2 */
+  --head-2-fs: 25px;
+  --head-2-lh: 30px;
+
+  /* menu */
+  --menu-fw: 500;
+  --menu-fs: 16px;
+  --menu-lh: 20px;
 }
 
 body {
   overflow-x: hidden;
+  color: var(--color-white);
 }
 
 h1,
@@ -62,7 +64,6 @@ h5 {
 
 a {
   text-decoration: none;
-  color: var(--color-dark);
 }
 ul {
   list-style-type: none;

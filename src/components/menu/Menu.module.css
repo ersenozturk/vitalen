@@ -1,0 +1,37 @@
+.container {
+  height: 50px;
+  padding: 22.5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 45px;
+  position: fixed;
+  top: 105px;
+  min-width: 1230px;
+
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.63) 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  backdrop-filter: blur(12.5px);
+  border-radius: var(--borderRadius);
+}
+.menuLeft {
+  color: var(--color-13);
+  font-weight: 500;
+  font-size: 25px;
+  line-height: 30px;
+}
+.menuRight ul {
+  display: flex;
+}
+.menuRight ul li {
+  color: var(--color-15);
+  font-weight: var(--menu-fw);
+  font-size: var(--menu-fs);
+  line-height: var(--menu-lh);
+}
+.menuRight ul li:last-child {
+  margin-left: 28px;
+}
