@@ -2,7 +2,24 @@
   height: 590px;
   /* background-color: #2b0534; */
   background-image: url("/public/assets/cinemaSeats.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   display: flex;
   justify-content: space-between;
   /* align-items: flex-start; */
+  padding: 188px 0px 45px;
+}
+.headerMiddle {
+  text-align: center;
+  font-size: var(--head-2-fs);
+  line-height: var(--head-2-lh);
+  color: var(--color-white);
+}
+.headerMiddle p:first-child {
+  font-weight: 400;
+}
+
+.headerMiddle p:last-child {
+  font-weight: 700;
 }

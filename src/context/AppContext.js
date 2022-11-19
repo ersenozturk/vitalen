@@ -22,6 +22,8 @@ export const AppContextProvider = ({ children }) => {
     "https://api.themoviedb.org/3/tv/top_rated?api_key=300486eba1a4a782eeecb32a1d9d72f4&language=en-US&page=1"
   );
 
+
+
   const value = {
     headerMovieArr,
     headerMovieLoading,

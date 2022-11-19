@@ -1,4 +1,3 @@
-//useFetch.js
 import { useState, useEffect } from "react";
 import axios from "axios";
 
@@ -6,7 +5,6 @@ function useFetch(url) {
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
-
 
   useEffect(() => {
     setLoading(true);
@@ -16,8 +14,14 @@ function useFetch(url) {
       .get(url)
       .then((res) => {
         setLoading(false);
-        res.data.results && setData(res.data.results);
-        // console.log(res.data.results)
+        
+        if (res.data.results) {
+          // for home page
+          setData(res.data.results);
+        } else {
+          // for detail page
+          setData(res.data);
+        }
       })
       .catch((err) => {
         setLoading(false);

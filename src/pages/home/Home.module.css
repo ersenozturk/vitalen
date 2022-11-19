@@ -1,3 +1,11 @@
-.container{
-    position: relative;
+.container {
+  position: relative;
+}
+
+.subHeader {
+  font-size: var(--head-2-fs);
+  line-height: var(--head-2-lh);
+  color: var(--color-black);
+
+  margin: 134px 45px 79px;
 }
