@@ -5,9 +5,11 @@
   justify-content: space-between;
   align-items: center;
   margin: 0 45px;
-  position: fixed;
+  /* position: fixed; */
+  position: sticky;
+  z-index: 1;
   top: 105px;
-  min-width: 1230px;
+  /* min-width: 1230px; */
 
   background: linear-gradient(
     90deg,
