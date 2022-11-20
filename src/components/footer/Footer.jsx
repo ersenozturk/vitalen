@@ -7,10 +7,22 @@ const Footer = () => {
 
       <ul className={styles.developerInfo}>
         <li>
-          <a href="https://www.linkedin.com/in/ozturkersen/">Linkedin</a>
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://www.linkedin.com/in/ozturkersen/"
+          >
+            Linkedin
+          </a>
         </li>
         <li>
-          <a href="https://github.com/ersenozturk">Github</a>
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://github.com/ersenozturk"
+          >
+            Github
+          </a>
         </li>
       </ul>
     </footer>

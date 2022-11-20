@@ -1,14 +1,19 @@
 #wrapperOut {
-    margin-left: calc((100vw - 100%) / -2);
-    margin-right: calc((100vw - 100%) / -2);
-  }
-  
-  #wrapperInner {
-    max-width: 1440px;
-    margin: 0 auto;
-  }
-  
-  #wrapper {
-    margin: 0 60px;
-  }
-  
+  margin-left: calc((100vw - 100%) / -2);
+  margin-right: calc((100vw - 100%) / -2);
+}
+
+#wrapperOutFooter {
+  margin-left: calc((100vw - 100%) / -2);
+  margin-right: calc((100vw - 100%) / -2);
+  background-color: var(--color-13);
+}
+
+.wrapperInner {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.wrapper {
+  margin: 0 60px;
+}
