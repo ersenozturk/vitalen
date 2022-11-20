@@ -6,7 +6,7 @@ import VideoSection from "../../components/videoSection/VideoSection";
 import noProfile from "../../images/no-craw-profile.jpg";
 
 const Detail = () => {
-  const navigate = useNavigate()
+  const navigate = useNavigate();
   const { id } = useParams();
   const [detail, setDetail] = useState([]);
   const [videoKey, setVideoKey] = useState("");
@@ -51,50 +51,46 @@ const Detail = () => {
     vote_average,
   } = detail;
 
-  // const { name, profile_path } = cast;
-  console.log(cast);
   return (
     <div className={styles.container}>
-      <div className={styles.goBack} onClick={
-        ()=>navigate(-1)
-      }>
+      <div className={styles.goBack} onClick={() => navigate(-1)}>
         GO BACK
       </div>
       {/*! title and youtube video */}
       <h1 className={styles.title}>{title}</h1>
       {videoKey && <VideoSection videoKey={videoKey} />}
+
+      <section className={styles.genreProduction}>
+        <ul>
+          <h5>genres</h5>
+          {genres?.map((x) => {
+            return <li>{x?.name}</li>;
+          })}
+        </ul>
+        <ul>
+          <h5>production_companies</h5>
+          {production_companies?.map((x) => {
+            return <li>{x?.name}</li>;
+          })}
+        </ul>
+      </section>
+
       {/*! detail movie/tv */}
-      <div>
+      <div className={styles.overviewPoster}>
         <div className={styles.posterDiv}>
           <img
             src={poster_path ? baseImageUrl + poster_path : defaultImage}
             alt={title}
           />
         </div>
-        <div>
+        <div className={styles.overviewRight}>
           <div className={styles.overview}>
             <h5>Overview</h5>
             <p>{overview}</p>
           </div>
           <ul>
-            <li>RATE : {vote_average}</li>
-            <li>release_date : {release_date}</li>
-            <li>
-              <div>
-                <h5>production_companies</h5>
-                {production_companies?.map((x) => {
-                  return <li>{x?.name}</li>;
-                })}
-              </div>
-            </li>
-            <li>
-              <div>
-                <h5>genres</h5>
-                {genres?.map((x) => {
-                  return <li>{x?.name}</li>;
-                })}
-              </div>
-            </li>
+            <li> <b>RATE :</b> {vote_average}</li>
+            <li> <b>release_date :</b> {release_date}</li>
           </ul>
         </div>
       </div>
@@ -113,7 +109,7 @@ const Detail = () => {
                 <img
                   className={styles.noProfileImg}
                   src={noProfile}
-                  alt='default img'
+                  alt="default img"
                 />
               )}
 

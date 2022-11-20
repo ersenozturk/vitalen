@@ -1,3 +1,30 @@
-.container{
-    color: #fff;
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 45px;
+  background-color: var(--color-13);
+}
+footer p {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 22px;
+  text-align: center;
+  color: #ffffff;
+}
+
+.developerInfo {
+  display: flex;
+}
+.developerInfo li a {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  color: #ffffff;
+}
+.developerInfo li{
+    padding: 28px;
+}
+.developerInfo li:last-child {
+  padding-right: 0;
 }
