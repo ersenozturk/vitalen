@@ -9,9 +9,9 @@ const Home = () => {
     <div className={styles.container}>
       <Menu />
       <Header />
-        <h2 className={styles.subHeader}>Popular Movies</h2>
+        <h2 className={styles.subHeader} id='popMoviesHead'>Popular Movies</h2>
         <Movies />
-        <h2 className={styles.subHeader}>Popular Movies</h2>
+        <h2 className={styles.subHeader} id='popTVHead'>Popular TV Series </h2>
         <TVseries />
     </div>
   );

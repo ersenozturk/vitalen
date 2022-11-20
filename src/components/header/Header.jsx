@@ -26,7 +26,7 @@ const Header = () => {
           </div>
         )}
         {/* {headerMovieArr && <div>{random8UpMovie?.title}</div>} */}
-        {headerMovieArr && <Card data={random8UpMovie} type="movie"/>} 
+        {headerMovieArr && <Card data={random8UpMovie} type="movie" cardPosition='up'/>} 
         {headerMovieError && <p>'err'</p>}
       </div>
 
@@ -42,7 +42,7 @@ const Header = () => {
           </div>
         )}
         {/* {headerTVArr && <div>{random8UpTV?.original_name}</div>} */}
-        {headerTVArr && <Card data={random8UpTV} type="tv"/> }
+        {headerTVArr && <Card data={random8UpTV} type="tv" cardPosition='up'/> }
         {headerTVError && <p>'err'</p>}
       </div>
     </div>

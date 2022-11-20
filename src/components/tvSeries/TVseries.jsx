@@ -10,7 +10,7 @@ const TVseries = () => {
   return (
     <div className={styles.container}>
       {data?.map((eachTV) => (
-        <Card type="tv" key={eachTV.id} data={eachTV} />
+        <Card type="tv" key={eachTV.id} data={eachTV} cardPosition='down'/>
       ))}
     </div>
   );

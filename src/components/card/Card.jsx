@@ -1,12 +1,11 @@
 import styles from "./Card.module.css";
 import { useNavigate } from "react-router-dom";
 
-const Card = ({ data=[], type="" }) => {
+const Card = ({ data = [], type = "", cardPosition = "" }) => {
   const navigate = useNavigate();
 
   const { id, poster_path, name, original_name, title } = data;
 
-  
   return (
     <div className={styles.card} onClick={() => navigate(`/detail/${id}`)}>
       <img
@@ -14,7 +13,12 @@ const Card = ({ data=[], type="" }) => {
         alt={name}
       />
       <div className={styles.cardFooter}>
-        <p className={styles.cardTitle}>{type === 'tv' ? original_name : title}</p>
+        <p className={styles.cardTitle}>
+          {type === "tv" ? original_name : title}
+        </p>
+      </div>
+      <div className={`${styles.scoreBoard} cardPosition === 'down' ? ${styles.down} : ${styles.up}`}>
+          5 /10
       </div>
     </div>
   );

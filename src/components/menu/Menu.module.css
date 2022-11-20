@@ -24,15 +24,17 @@
   font-weight: 500;
   font-size: 25px;
   line-height: 30px;
+  cursor: pointer;
 }
 .menuRight ul {
   display: flex;
 }
-.menuRight ul li {
+.menuRight ul li a{
   color: var(--color-15);
   font-weight: var(--menu-fw);
   font-size: var(--menu-fs);
   line-height: var(--menu-lh);
+  cursor: pointer;
 }
 .menuRight ul li:last-child {
   margin-left: 28px;

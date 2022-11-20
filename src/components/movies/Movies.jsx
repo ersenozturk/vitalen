@@ -10,7 +10,7 @@ const Movies = () => {
     <div className={styles.container}>
 
       {data?.map((eachMovie) => (
-        <Card key={eachMovie.id} type="movie" data={eachMovie}/>
+        <Card key={eachMovie.id} type="movie" data={eachMovie} cardPosition='down'/>
       ))}
     </div>
   );
