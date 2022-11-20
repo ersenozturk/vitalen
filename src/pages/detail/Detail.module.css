@@ -1,3 +1,44 @@
+.goBack{
+    display: flex;
+
+    cursor: pointer;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+}
 .container{
     color: var(--color-black);
+    margin-top: 60px;
 }
+.title{
+    text-align: center;
+}
+.cast{
+    display: flex;
+    flex-wrap: wrap;
+}
+.profile {
+    position: relative;
+    cursor: pointer;
+    margin: 45px;
+  }
+  .profileFooter {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(36, 18, 58, 0.76);
+    backdrop-filter: blur(2px);
+    border-radius: 0px 0px 4px 4px;
+    width: 220px;
+  }
+  .profileTitle {
+    padding: 27px 22.5px 32px 22.5px;
+    text-align: center;
+  }
+  .noProfileImg{
+    height: 330px;
+    width: 220px;
+  }

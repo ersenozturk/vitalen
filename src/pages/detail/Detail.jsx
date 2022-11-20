@@ -1,10 +1,12 @@
 import styles from "./Detail.module.css";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import axios from "axios";
 import { useEffect, useState } from "react";
 import VideoSection from "../../components/videoSection/VideoSection";
+import noProfile from "../../images/no-craw-profile.jpg";
 
 const Detail = () => {
+  const navigate = useNavigate()
   const { id } = useParams();
   const [detail, setDetail] = useState([]);
   const [videoKey, setVideoKey] = useState("");
@@ -53,9 +55,15 @@ const Detail = () => {
   console.log(cast);
   return (
     <div className={styles.container}>
+      <div className={styles.goBack} onClick={
+        ()=>navigate(-1)
+      }>
+        GO BACK
+      </div>
+      {/*! title and youtube video */}
       <h1 className={styles.title}>{title}</h1>
       {videoKey && <VideoSection videoKey={videoKey} />}
-
+      {/*! detail movie/tv */}
       <div>
         <div className={styles.posterDiv}>
           <img
@@ -90,16 +98,28 @@ const Detail = () => {
           </ul>
         </div>
       </div>
-
-      <div>
+      {/*! cast */}
+      <h2>Number of cast: {cast?.length}</h2>
+      <div className={styles.cast}>
         {cast.map((eachCast) => {
           return (
-            <div>
-              <h5>{eachCast?.name}</h5>
-              <img
-                src={`https://image.tmdb.org/t/p/w220_and_h330_face/${eachCast?.profile_path}`}
-                alt=""
-              />
+            <div className={styles.profile}>
+              {eachCast?.profile_path !== null ? (
+                <img
+                  src={`https://image.tmdb.org/t/p/w220_and_h330_face/${eachCast?.profile_path}`}
+                  alt={eachCast?.name}
+                />
+              ) : (
+                <img
+                  className={styles.noProfileImg}
+                  src={noProfile}
+                  alt='default img'
+                />
+              )}
+
+              <div className={styles.profileFooter}>
+                <p className={styles.profileTitle}>{eachCast?.name}</p>
+              </div>
             </div>
           );
         })}
