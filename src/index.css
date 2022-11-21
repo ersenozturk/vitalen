@@ -51,6 +51,10 @@
 
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   overflow-x: hidden;
   color: var(--color-white);
