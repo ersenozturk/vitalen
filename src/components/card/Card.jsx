@@ -9,7 +9,7 @@ const Card = ({ data = [], type = "", cardPosition = "" }) => {
   return (
     <div
       className={styles.card}
-      onClick={() => navigate(`/detail/${id}`, { state: type })}
+      onClick={() => navigate(`/detail/${id}/${type}`)}
     >
       <img
         src={`https://www.themoviedb.org/t/p/w220_and_h330_face/${poster_path}`}

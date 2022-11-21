@@ -1,5 +1,5 @@
 import styles from "./Detail.module.css";
-import { useLocation, useNavigate, useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import axios from "axios";
 import { useEffect, useState } from "react";
 import VideoSection from "../../components/videoSection/VideoSection";
@@ -7,15 +7,15 @@ import noProfile from "../../images/no-craw-profile.jpg";
 import { useAppContext } from "../../hooks/useAppContext";
 
 const Detail = () => {
-  const type = useLocation().state;
 
+  const {id='',type=''} = useParams()
   const navigate = useNavigate();
-  const { id } = useParams();
+  const { API_KEY } = useAppContext();
+
   const [detail, setDetail] = useState([]);
   const [videoKey, setVideoKey] = useState("");
   const [cast, setCast] = useState([]);
 
-  const { API_KEY } = useAppContext();
 
   const detailBaseUrl = `https://api.themoviedb.org/3/${
     type === "movie" ? "movie" : "tv"
@@ -58,7 +58,7 @@ const Detail = () => {
     production_companies,
     vote_average,
   } = detail;
-console.log(detail)
+
   return (
     <div className={styles.container}>
       <div className={styles.goBack} onClick={() => navigate(-1)}>
