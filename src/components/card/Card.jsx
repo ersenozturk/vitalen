@@ -17,11 +17,18 @@ const Card = ({ data = [], type = "", cardPosition = "" }) => {
           {type === "tv" ? original_name : title}
         </p>
       </div>
-      <div
-        className={`${styles.scoreBoard} cardPosition === 'down' ? ${styles.down} : ${styles.up}`}
+      {
+        cardPosition === 'down' ? (<div
+          className={`${styles.scoreBoard} ${styles.down}`}
+        >
+         {vote_average?.toFixed(1)} / 10
+        </div>) : (<div
+        className={`${styles.scoreBoard} ${styles.up}`}
       >
-       {vote_average} / 10
-      </div>
+       {vote_average?.toFixed(1)} / 10
+      </div>)
+      }
+      
     </div>
   );
 };
