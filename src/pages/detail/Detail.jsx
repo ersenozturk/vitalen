@@ -87,14 +87,14 @@ const Detail = () => {
           </div>
             <h5>Genres</h5>
           <ul>
-            {genres?.map((x) => {
-              return <li>{x?.name}</li>;
+            {genres?.map((x,i) => {
+              return <li key={i}>{x?.name}</li>;
             })}
           </ul>
             <h5>Production Companies</h5>
           <ul>
-            {production_companies?.map((x) => {
-              return <li>{x?.name}</li>;
+            {production_companies?.map((x,index) => {
+              return <li key={index}>{x?.name}</li>;
             })}
           </ul>
         </div>
@@ -106,8 +106,9 @@ const Detail = () => {
       </h2>
       <div className={styles.cast}>
         {cast.map((eachCast) => {
+          
           return (
-            <div className={styles.profile}>
+            <div key={eachCast.id} className={styles.profile}>
               {eachCast?.profile_path !== null ? (
                 <img
                   className={styles.profileImg}
