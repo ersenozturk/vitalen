@@ -25,7 +25,7 @@ function useFetch(url) {
       })
       .catch((err) => {
         setLoading(false);
-        setError("An error occurred. Awkward..");
+        setError("An error occurred...");
       });
   }, [url]);
 

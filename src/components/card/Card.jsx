@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 const Card = ({ data = [], type = "", cardPosition = "" }) => {
   const navigate = useNavigate();
 
-  const { id,vote_average, poster_path, name, original_name, title } = data;
+  const { id, vote_average, poster_path, name, original_name, title } = data;
 
   return (
     <div className={styles.card} onClick={() => navigate(`/detail/${id}`)}>
@@ -17,18 +17,15 @@ const Card = ({ data = [], type = "", cardPosition = "" }) => {
           {type === "tv" ? original_name : title}
         </p>
       </div>
-      {
-        cardPosition === 'down' ? (<div
-          className={`${styles.scoreBoard} ${styles.down}`}
-        >
-         {vote_average?.toFixed(1)} / 10
-        </div>) : (<div
-        className={`${styles.scoreBoard} ${styles.up}`}
-      >
-       {vote_average?.toFixed(1)} / 10
-      </div>)
-      }
-      
+      {cardPosition === "down" ? (
+        <div className={`${styles.scoreBoard} ${styles.down}`}>
+          {vote_average?.toFixed(1)} / 10
+        </div>
+      ) : (
+        <div className={`${styles.scoreBoard} ${styles.up}`}>
+          {vote_average?.toFixed(1)} / 10
+        </div>
+      )}
     </div>
   );
 };

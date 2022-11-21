@@ -71,7 +71,7 @@ const Detail = () => {
           <section className={styles.genreProduction}>
             <ul>
               <li>
-                <b>RATE :</b> {vote_average} / 10
+                <b>RATE :</b> {vote_average?.toFixed(1)} / 10
               </li>
               <li>
                 <b>RELEASE:</b> {release_date}
