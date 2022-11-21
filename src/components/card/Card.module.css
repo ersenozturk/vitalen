@@ -3,6 +3,11 @@
   cursor: pointer;
   margin: 45px;
 }
+.card img{
+  border-top-left-radius: var(--borderRadius);
+  border-bottom-right-radius: var(--borderRadius);
+  border-bottom-left-radius: var(--borderRadius);
+}
 .cardFooter {
   position: absolute;
   bottom: 0;
@@ -23,7 +28,7 @@
 .scoreBoard {
   color: white;
   position: absolute;
-  top: -33px;
+  top: -34px;
   right: 0px;
   padding: 7px 17px;
 
@@ -31,6 +36,8 @@
   font-size: 16px;
   line-height: 20px;
   text-align: center;
+  border-top-left-radius: var(--borderRadius);
+  border-top-right-radius: var(--borderRadius);
 
 }
 
@@ -41,6 +48,5 @@
 .down {
   background-color: var(--color-13);
   color: var(--color-white);
-
 }
 

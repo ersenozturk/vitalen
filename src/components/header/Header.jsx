@@ -1,10 +1,11 @@
-import { useContext } from "react";
-import { AppContext } from "../../context/AppContext";
+
+import { useAppContext } from "../../hooks/useAppContext";
 import { randomItemFunc } from "../../utils/function";
 import Card from "../card/Card";
 import styles from "./Header.module.css";
 
 const Header = () => {
+
   const {
     headerMovieArr,
     headerMovieLoading,
@@ -12,7 +13,7 @@ const Header = () => {
     headerTVArr,
     headerTVLoading,
     headerTVError,
-  } = useContext(AppContext);
+  } = useAppContext()
 
   const random8UpMovie = randomItemFunc(headerMovieArr);
   const random8UpTV = randomItemFunc(headerTVArr);
@@ -25,7 +26,6 @@ const Header = () => {
             <img src="/assets/loading.gif" alt="" />
           </div>
         )}
-        {/* {headerMovieArr && <div>{random8UpMovie?.title}</div>} */}
         {headerMovieArr && <Card data={random8UpMovie} type="movie" cardPosition='up'/>} 
         {headerMovieError && <p>'err'</p>}
       </div>
@@ -41,7 +41,6 @@ const Header = () => {
             <img src="/assets/loading.gif" alt="" />
           </div>
         )}
-        {/* {headerTVArr && <div>{random8UpTV?.original_name}</div>} */}
         {headerTVArr && <Card data={random8UpTV} type="tv" cardPosition='up'/> }
         {headerTVError && <p>'err'</p>}
       </div>

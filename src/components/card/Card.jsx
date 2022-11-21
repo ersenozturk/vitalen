@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 const Card = ({ data = [], type = "", cardPosition = "" }) => {
   const navigate = useNavigate();
 
-  const { id, poster_path, name, original_name, title } = data;
+  const { id,vote_average, poster_path, name, original_name, title } = data;
 
   return (
     <div className={styles.card} onClick={() => navigate(`/detail/${id}`)}>
@@ -20,10 +20,9 @@ const Card = ({ data = [], type = "", cardPosition = "" }) => {
       <div
         className={`${styles.scoreBoard} cardPosition === 'down' ? ${styles.down} : ${styles.up}`}
       >
-        5 /10
+       {vote_average} / 10
       </div>
     </div>
   );
 };
-
 export default Card;
