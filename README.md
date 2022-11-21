@@ -1,7 +1,7 @@
 # Project: Vitalen
 
 ## Project Live Demo
-
+The project was deployed via netlify ---> https://vitalen-ersenozturk.netlify.app/
 
 
 ## Description
