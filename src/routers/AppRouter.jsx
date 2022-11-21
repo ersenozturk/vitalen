@@ -9,8 +9,8 @@ const AppRouter = () => {
     <div>
       <BrowserRouter>
         <div id="wrapperOut">
-          <div class="wrapperInner">
-            <div class="wrapper">
+          <div className="wrapperInner">
+            <div className="wrapper">
               <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/detail/:id" element={<Detail />} />
@@ -19,8 +19,8 @@ const AppRouter = () => {
           </div>
         </div>
         <div id="wrapperOutFooter">
-          <div class="wrapperInner">
-            <div class="wrapper">
+          <div className="wrapperInner">
+            <div className="wrapper">
               <Footer />
             </div>
           </div>
