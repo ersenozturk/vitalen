@@ -39,9 +39,6 @@ const Detail = () => {
       .catch((err) => console.log(err));
   }, [detailBaseUrl, videoUrl, castUrl]);
 
-  // console.log(1111111111111111, detail);
-  // console.log(222222222222, videoKey);
-
   const {
     title,
     poster_path,
@@ -102,8 +99,7 @@ const Detail = () => {
       </div>
       {/*! cast */}
       <h2 className={styles.castTitle}>
-        The cast of this movie consists of <span>{cast?.length}</span> people{" "}
-      </h2>
+      A cast of <span>{cast?.length}</span> players;        </h2>
       <div className={styles.cast}>
         {cast.map((eachCast) => {
           
