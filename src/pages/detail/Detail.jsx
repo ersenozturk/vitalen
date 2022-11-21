@@ -1,5 +1,5 @@
 import styles from "./Detail.module.css";
-import { useNavigate, useParams } from "react-router-dom";
+import { useLocation, useNavigate, useParams } from "react-router-dom";
 import axios from "axios";
 import { useEffect, useState } from "react";
 import VideoSection from "../../components/videoSection/VideoSection";
@@ -7,6 +7,8 @@ import noProfile from "../../images/no-craw-profile.jpg";
 import { useAppContext } from "../../hooks/useAppContext";
 
 const Detail = () => {
+  const type = useLocation().state;
+
   const navigate = useNavigate();
   const { id } = useParams();
   const [detail, setDetail] = useState([]);
@@ -15,14 +17,21 @@ const Detail = () => {
 
   const { API_KEY } = useAppContext();
 
-  const detailBaseUrl = `https://api.themoviedb.org/3/movie/${id}?api_key=${API_KEY}`;
-  const videoUrl = `https://api.themoviedb.org/3/movie/${id}/videos?api_key=${API_KEY}`;
+  const detailBaseUrl = `https://api.themoviedb.org/3/${
+    type === "movie" ? "movie" : "tv"
+  }/${id}?api_key=${API_KEY}`;
+
+  const videoUrl = `https://api.themoviedb.org/3/${
+    type === "movie" ? "movie" : "tv"
+  }/${id}/videos?api_key=${API_KEY}`;
 
   const baseImageUrl = "https://image.tmdb.org/t/p/w1280";
   const defaultImage =
     "https://images.unsplash.com/photo-1581905764498-f1b60bae941a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=80";
 
-  const castUrl = `https://api.themoviedb.org/3/movie/${id}/credits?api_key=300486eba1a4a782eeecb32a1d9d72f4&language=en-US`;
+  const castUrl = `https://api.themoviedb.org/3/${
+    type === "movie" ? "movie" : "tv"
+  }/${id}/credits?api_key=300486eba1a4a782eeecb32a1d9d72f4&language=en-US`;
 
   useEffect(() => {
     axios
@@ -79,30 +88,29 @@ const Detail = () => {
 
         <div className={styles.overviewRight}>
           <div className={styles.overview}>
-            <h5 style={{marginBottom:'22.5px'}}>Overview</h5>
+            <h5 style={{ marginBottom: "22.5px" }}>Overview</h5>
             <p>{overview}</p>
           </div>
-            <h5>Genres</h5>
+          <h5>Genres</h5>
           <ul>
-            {genres?.map((x,i) => {
+            {genres?.map((x, i) => {
               return <li key={i}>{x?.name}</li>;
             })}
           </ul>
-            <h5>Production Companies</h5>
+          <h5>Production Companies</h5>
           <ul>
-            {production_companies?.map((x,index) => {
+            {production_companies?.map((x, index) => {
               return <li key={index}>{x?.name}</li>;
             })}
           </ul>
         </div>
-
       </div>
       {/*! cast */}
       <h2 className={styles.castTitle}>
-      A cast of <span>{cast?.length}</span> players;        </h2>
+        A cast of <span>{cast?.length}</span> players;{" "}
+      </h2>
       <div className={styles.cast}>
         {cast.map((eachCast) => {
-          
           return (
             <div key={eachCast.id} className={styles.profile}>
               {eachCast?.profile_path !== null ? (

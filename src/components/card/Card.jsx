@@ -7,7 +7,10 @@ const Card = ({ data = [], type = "", cardPosition = "" }) => {
   const { id, vote_average, poster_path, name, original_name, title } = data;
 
   return (
-    <div className={styles.card} onClick={() => navigate(`/detail/${id}`)}>
+    <div
+      className={styles.card}
+      onClick={() => navigate(`/detail/${id}`, { state: type })}
+    >
       <img
         src={`https://www.themoviedb.org/t/p/w220_and_h330_face/${poster_path}`}
         alt={name}
