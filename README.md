@@ -1,70 +1,84 @@
-# Getting Started with Create React App
+# Project: Vitalen
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Project Live Demo
 
-## Available Scripts
 
-In the project directory, you can run:
 
-### `npm start`
+## Description
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+The main purpose of the Vitalen project is based on the following 3 pillars;
+- CSS capabilities
+- Receiving data from an API.
+- Creating reusable components
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+With the data retrieved from the MOVIE DB API, content suitable for figma design has been prepared.
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Project Skeleton
 
-### `npm run build`
+```
+008 - Movie App (folder)
+|
+|----readme.md         # Given to the students (Definition of the project)
+SOLUTION
+├── public
+│     └── index.html
+│     └── assets
+├── src
+│    ├── components
+│    │     ├── Card.js
+│    │     └── Footer.js
+│    │     └── Header.js
+│    │     └── Menu.js
+│    │     └── Movies.js
+│    │     └── TvSeries.js
+│    │     └── VideoSection.js
+│    ├── context
+│    │     └── AppContext.js
+│    ├── pages
+│    │     ├── Home.jsx
+│    │     ├── Detail.jsx
+│    ├── router
+│    │     └── AppRouter.jsx
+│    ├── hooks
+│    │     └── useFetch.js
+│    │     └── useAppContext.js
+│    ├── utils
+│    │     └── functions.js
+│    ├── images
+│    ├── App.js
+│    ├── App.css
+│    ├── index.js
+│    └── index.css
+├── package.json
+├── .env
+└── yarn.lock
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Expected Outcome
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+![Project 008 Snapshot](Homepage.png)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Objective
 
-### `npm run eject`
+Build a Vitalen project using Js and pure CSS.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Main Steps to Project
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- Step 1 : Signup `https://www.themoviedb.org/documentation/api` and get API_KEY for getting data.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- Step 2 : In order to show that the data can be reached at the level needed, a context provider covering the entire application was created.
 
-## Learn More
+- Step 3 : The react-router-dom structure has been created for the SPA(Single Page Application).
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- Step 4 : Component folders needed according to Figma design have been adjusted.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- Step 5 : Added main styles to root in index.css for CSS.
 
-### Code Splitting
+- Step 6 : Functions(utils), images(assets) and custom hooks(hooks) are foldered separately to keep them organized and reusable.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Analyzing the Bundle Size
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+**<p align="center">&#9786; Happy Coding &#9997;</p>**
