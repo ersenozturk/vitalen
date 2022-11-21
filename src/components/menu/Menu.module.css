@@ -19,7 +19,7 @@
   backdrop-filter: blur(12.5px);
   border-radius: var(--borderRadius);
 }
-.menuLeft {
+.menuLeft a{
   color: var(--color-13);
   font-weight: 500;
   font-size: 25px;

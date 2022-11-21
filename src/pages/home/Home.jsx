@@ -6,7 +6,7 @@ import styles from "./Home.module.css";
 
 const Home = () => {
   return (
-    <div className={styles.container}>
+    <div className={styles.container} id='home'>
       <Menu />
       <Header />
         <h2 className={styles.subHeader} id='popMoviesHead'>Popular Movies</h2>

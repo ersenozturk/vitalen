@@ -100,12 +100,16 @@
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
+  margin-left: 22.5px;
 }
 .overviewRight li {
   font-size: var(--head-2-fs);
   line-height: var(--head-2-lh);
-
   margin: 10px 0;
+
+}
+li::marker{
+  display: none !important;
 }
 
 .castTitle {
