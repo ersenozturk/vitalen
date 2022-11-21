@@ -3,6 +3,7 @@ import { useAppContext } from "../../hooks/useAppContext";
 import { randomItemFunc } from "../../utils/function";
 import Card from "../card/Card";
 import styles from "./Header.module.css";
+import seats from '../../images/cinemaSeats2.png'
 
 const Header = () => {
 
@@ -20,6 +21,7 @@ const Header = () => {
   
   return (
     <div className={styles.container}>
+      <img className={styles.containerImg} src={seats} alt="" />
       <div className={styles.headerLeft}>
         {headerMovieLoading && (
           <div>
