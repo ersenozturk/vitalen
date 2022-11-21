@@ -6,6 +6,12 @@
   font-size: var(--head-2-fs);
   line-height: var(--head-2-lh);
   color: var(--color-black);
-
   margin: 134px 45px 79px;
+}
+
+@media only screen and (max-width: 868px) {
+  .subHeader{
+    margin: 22.5px 0;
+    text-align: center;
+  }
 }

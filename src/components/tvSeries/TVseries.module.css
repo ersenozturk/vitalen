@@ -5,3 +5,10 @@
     justify-content: space-between;
 }
 
+@media only screen and (max-width: 868px) {
+    /* .container {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+    } */
+    .container{justify-content: space-evenly;}
+  }

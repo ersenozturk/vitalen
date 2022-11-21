@@ -30,3 +30,15 @@
 .headerMiddle p:last-child {
   font-weight: 700;
 }
+
+@media only screen and (max-width: 868px) {
+  .container {
+    height: 430px;
+    align-items: center;
+
+  }
+  .headerMiddle {
+    font-size: 12px;
+    line-height: 16px;
+  }
+}

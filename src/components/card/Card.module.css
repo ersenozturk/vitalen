@@ -3,7 +3,7 @@
   cursor: pointer;
   margin: 45px;
 }
-.card img{
+.card img {
   border-top-left-radius: var(--borderRadius);
   border-bottom-right-radius: var(--borderRadius);
   border-bottom-left-radius: var(--borderRadius);
@@ -38,7 +38,6 @@
   text-align: center;
   border-top-left-radius: var(--borderRadius);
   border-top-right-radius: var(--borderRadius);
-
 }
 
 .up {
@@ -50,3 +49,26 @@
   color: var(--color-white);
 }
 
+@media only screen and (max-width: 868px) {
+  .card {
+    margin: 15px 10px;
+  }
+  .card img {
+    height: 170px;
+    width: 113px;
+  }
+  .cardFooter{
+    width: 100%;
+  }
+  .cardTitle{
+    padding: 5px 5px;
+    font-size: 13px;
+
+  }
+  .scoreBoard{
+    padding: 1px 5px;
+    font-size: 13px;
+    top: -22px;
+
+  }
+}
