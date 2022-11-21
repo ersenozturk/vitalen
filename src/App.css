@@ -17,3 +17,10 @@
 .wrapper {
   margin: 0 60px;
 }
+
+
+@media only screen and (max-width: 868px) {
+  .wrapper{
+    margin: 0 10px;
+  }
+}

@@ -49,6 +49,7 @@ const Detail = () => {
   }, [detailBaseUrl, videoUrl, castUrl]);
 
   const {
+    name,
     title,
     poster_path,
     overview,
@@ -57,14 +58,15 @@ const Detail = () => {
     production_companies,
     vote_average,
   } = detail;
-
+console.log(detail)
   return (
     <div className={styles.container}>
       <div className={styles.goBack} onClick={() => navigate(-1)}>
         GO BACK
       </div>
       {/*! title and youtube video */}
-      <h1 className={styles.title}>{title}</h1>
+      <h1 className={styles.title}>{type === 'movie' ? title : name}</h1>
+
       {videoKey && <VideoSection videoKey={videoKey} />}
 
       {/*! detail movie/tv */}
@@ -107,7 +109,7 @@ const Detail = () => {
       </div>
       {/*! cast */}
       <h2 className={styles.castTitle}>
-        A cast of <span>{cast?.length}</span> players;{" "}
+        A cast of <span>{cast?.length}</span> people took part in this <span>{type === "movie" ? "movie" : "Tv Series"}</span>.
       </h2>
       <div className={styles.cast}>
         {cast.map((eachCast) => {
