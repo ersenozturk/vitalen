@@ -17,9 +17,9 @@ With the data retrieved from the MOVIE DB API, content suitable for figma design
 ## Project Skeleton
 
 ```
-008 - Movie App (folder)
+Vitalen (folder)
 |
-|----readme.md         # Given to the students (Definition of the project)
+|----readme.md
 SOLUTION
 ├── public
 │     └── index.html
